@@ -1,2 +1,2 @@
 # pi_pico_template
-pi pico template for adding new libraries
+pi pico libary for common actions
