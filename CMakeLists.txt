@@ -9,6 +9,9 @@ pico_sdk_init()
 add_library( utilLib
     disable_interrupt.hpp
     disable_interrupt.cpp
+
+    mutex_lock.hpp
+    mutex_lock.cpp
     )
 
 target_link_libraries( utilLib
