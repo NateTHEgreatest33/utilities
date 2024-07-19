@@ -5,9 +5,9 @@
 *       queue.cpp
 *
 *   DESCRIPTION:
-*       API for mutex locking using RAII
+*       dynamic memory free version of std::queue. Size limited.
 *
-*   Copyright 2023 Nate Lenze
+*   Copyright 2024 Nate Lenze
 *
 *********************************************************************/
 

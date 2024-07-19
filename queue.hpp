@@ -3,12 +3,12 @@
 /*********************************************************************
 *
 *   HEADER:
-*       header file for queue.cpp
+*       header file for queue
 *
 *   NOTE:
 *       queue is not thread safe and needs to be protected by the user
 *
-*   Copyright 2023 Nate Lenze
+*   Copyright 2024 Nate Lenze
 *
 ****************a*****************************************************/
 /*--------------------------------------------------------------------
