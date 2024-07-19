@@ -12,6 +12,9 @@ add_library( utilLib
 
     mutex_lock.hpp
     mutex_lock.cpp
+
+    queue.hpp
+    queue.cpp
     )
 
 target_link_libraries( utilLib
