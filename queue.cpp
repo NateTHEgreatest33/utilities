@@ -213,3 +213,22 @@ T utl::queue<N, T>::front( void )
 return *p_front_itr;
 } /* utl::queue<N, T>::front() */
 
+/*********************************************************************
+*
+*   PROCEDURE NAME:
+*       utl::queue<N, T>::front()
+*
+*   DESCRIPTION:
+*       function for aquiring item at front of queue
+*
+*********************************************************************/
+template <int N, typename T>
+void utl::queue<N, T>::empty
+    ( 
+    void 
+    )
+{
+p_size = 0;
+p_front_itr = p_data.begin();
+p_tail_itr = p_data.begin();
+} /* utl::queue<N, T>::empty() */

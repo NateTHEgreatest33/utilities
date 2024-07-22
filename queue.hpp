@@ -55,6 +55,7 @@ class queue
         ~queue();
         bool is_empty( void );
         bool is_full( void );
+        void empty( void );
         T front( void );
         void pop( void );
         bool push( T item );
