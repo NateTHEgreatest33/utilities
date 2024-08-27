@@ -14,7 +14,7 @@ add_library( utilLib
     mutex_lock.cpp
 
     queue.hpp
-    queue.cpp
+    queue.tpp
     )
 
 target_link_libraries( utilLib

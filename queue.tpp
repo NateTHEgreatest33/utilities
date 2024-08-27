@@ -2,10 +2,11 @@
 /*********************************************************************
 *
 *   NAME:
-*       queue.cpp
+*       queue.tpp
 *
 *   DESCRIPTION:
-*       dynamic memory free version of std::queue. Size limited.
+*       implementation of dynamic memory free version of std::queue. 
+*       Size limited.
 *
 *   Copyright 2024 Nate Lenze
 *
@@ -14,7 +15,6 @@
 /*--------------------------------------------------------------------
                               INCLUDES
 --------------------------------------------------------------------*/
-#include "queue.hpp"
 
 /*--------------------------------------------------------------------
                           GLOBAL NAMESPACE
