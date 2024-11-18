@@ -58,8 +58,12 @@ mutex_lock()
 template <int N, typename T>
 utl::queue<N, T>::queue()
 {
+p_size = 0;
+memset( &p_data, 0x00, (sizeof(T) * N) );
+
 p_front_itr = p_data.begin();
 p_tail_itr = p_data.begin();
+
 } /* utl::queue<N, T>::queue() */
 
 /*********************************************************************
@@ -88,7 +92,7 @@ utl::queue<N, T>::~queue()
 template <int N, typename T>
 bool utl::queue<N, T>::is_empty( void )
 {
-return ( p_front_itr == p_tail_itr );
+return ( p_size == 0 );
 } /* utl::queue<N, T>::is_empty() */
 
 /*********************************************************************
@@ -155,12 +159,19 @@ bool utl::queue<N, T>::push( T item )
 return false if queue is full
 --------------------------------*/
 if( p_size >= N )
+    {
     return false;
+    }
+
+/*--------------------------------
+Populate queue location
+--------------------------------*/
+*p_tail_itr = item;
 
 /*--------------------------------
 Update size and iterator location
 --------------------------------*/
-p_tail_itr++;
+p_tail_itr++;                        
 p_size++;
 
 /*--------------------------------
@@ -168,12 +179,9 @@ Account for rollover incase that
 has occoured
 --------------------------------*/
 if( p_tail_itr == p_data.end() )
+    {
     p_tail_itr = p_data.begin();
-
-/*--------------------------------
-Populate queue location
---------------------------------*/
-*p_tail_itr = item;
+    }
 
 /*--------------------------------
 return true
